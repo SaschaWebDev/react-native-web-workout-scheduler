@@ -3,6 +3,8 @@
 ## Difference between React and React Native Web
 
 - This project uses react.js. With the React Native Web integration it allows us to use the React Native API and render HTML elements.
+- React Native web uses different components like `<View><Text>Hello<Text/><View/>` and then converts them into jsx/html elements like div.
+- For rendering the elements we use a different injection/entry point into the html which is further explained [here](http://necolas.github.io/react-native-web/docs/?path=/docs/guides-client-side--page).
 
 ## Installation/Setup
 
@@ -14,7 +16,24 @@ yarn add react-native@0.55.4 react-native-web@0.10.0 react-art@16.8.2
 yarn add -D @types/react-native@0.55.4
 ```
 
-### Handy TypeScript React Snippets support
+### Instead of Expo for working with hooks we will use React Native cli
+
+```
+npm i -g react-native-cli
+```
+
+### Install a separate new React Native project and use specific react version for compatibility
+
+```
+npx react-native init MyApp --template react-native-template-typescript
+npm i react@16.8.2 react-native@0.59.0-rc.1
+```
+
+### Converting React Native Web and React Native into a shared monorepo
+
+- Just paste both projects into one repository under the folder packages and rename react native web to `web` and react native to `app` to make distinction easier.
+
+## Handy TypeScript React Snippets support
 
 - [More here](https://gist.github.com/benawad/1e9dd01994f78489306fbfd6f7b01cd3)
 - Add them with SHIFT + CMD + P
@@ -101,7 +120,7 @@ yarn add -D @types/react-native@0.55.4
 }
 ```
 
-### Handy Shortcuts
+## Handy Shortcuts
 
 - Import all missimg imports
 
