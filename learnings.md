@@ -100,3 +100,13 @@ yarn add -D @types/react-native@0.55.4
   }
 }
 ```
+
+### Handy Shortcuts
+
+- Import all missimg imports
+
+```
+Cursor on file
+CMD/CTRL + .
+Chose import all missing imports
+```
